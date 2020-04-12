@@ -27,7 +27,7 @@ window.onload = function() {
         });
         $('.select-all.select-row').on('change', function(){
             var $this = $(this);
-            $this.parents('tr').find('.checkbox').not('.select-all').each(function(i,elem){
+            $this.closest('tr').find('.checkbox').not('.select-all').each(function(i,elem){
                 $(elem).prop('checked', $this.prop('checked'));
             })
         });
